@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+div {
+    position: relative;;
+}
+
+div p {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
