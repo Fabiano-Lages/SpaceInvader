@@ -12,4 +12,6 @@
     <strong>OBS.:</strong> com algumas alterações.
 </p>
 
-<img src=-"https://github.com/Fabiano-Lages/SpaceInvader/blob/main/img/Thumb.png" />
+<p>
+    <img src=-"https://github.com/Fabiano-Lages/SpaceInvader/blob/main/img/Thumb.png" />
+</p>
