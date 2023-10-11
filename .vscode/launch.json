@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file://D:/Repositorio/js/spaceinvader/index.html",
+            "url": "file://C:/Repositório/js/jogos/SpaceInvader/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

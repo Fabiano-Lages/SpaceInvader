@@ -5,16 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Space Invaders</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-
+        <div id="pnInicio">
+            <button id="btn_iniciar" class="btn btn-primary" onclick="start();">Iniciar</button>
+        </div>
         <div>
             <p>
                 <span>Score:</span> <span id="scoreEl">0</span>
             </p>
             <canvas></canvas>
-        </div>        
+        </div>
         <script type="text/javascript" src="js/class.js"></script>
         <script type="text/javascript" src="js/controls.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

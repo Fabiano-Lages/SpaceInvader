@@ -17,14 +17,18 @@ class Player {
             this.image = image; 
             this.width = image.width * scale;
             this.height = image.height * scale;
-            this.position = {
-                x: canvas.width / 2 - this.width / 2,
-                y: canvas.height - this.height - 20
-            };
         };
+        
+        this.inicia();
+        this.audio = new Audio(audios[1].src);
+    }
 
-        this.audio = new Audio();
-        this.audio.src = "audio/explosao.mp3";
+    inicia() {
+        this.position = {
+            x: canvas.width / 2 - this.width / 2,
+            y: canvas.height - this.height - 20
+        };
+        this.opacity = 1;
     }
 
     draw() {
@@ -71,7 +75,7 @@ class Projectile {
         this.velocity = velocity;
         this.radius = 4;
         this.start = true;
-        this.audio = new Audio(tiro.src);
+        this.audio = new Audio(audios[2].src);
 
     }
 
@@ -136,7 +140,7 @@ class Invader {
             };
         };
 
-        this.audio = new Audio(naveDestruida.src);
+        this.audio = new Audio(audios[0].src);
     }
 
     draw() {

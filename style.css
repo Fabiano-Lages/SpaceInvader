@@ -21,3 +21,14 @@ div p {
     font-family: sans-serif;
     font-size: 14px;
 }
+
+.escondido {
+    display: none;
+}
+
+#pnInicio {
+    position: absolute;
+    top: 45%;
+    margin: auto;
+    z-index: 500;
+}

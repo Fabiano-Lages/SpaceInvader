@@ -50,7 +50,6 @@ addEventListener("keyup", ({key}) => {
     }
 });
 
-
 function animate() {
     if(game.active) {
         requestAnimationFrame(animate);
@@ -108,6 +107,8 @@ function animate() {
 
                             setTimeout(() => {
                                 game.active = false;
+                                audios[4].pause();
+                                document.getElementById("btn_iniciar").classList.remove("escondido");
                             }, 2000);
                     }
                 } else {
@@ -189,6 +190,38 @@ function estrelas() {
             color: "white"
         }));
     }
+}
+
+function fundoMusical() {
+    audios[4].loop = true;
+    audios[4].play();
+}
+
+function zeraControles() {
+    frames = 0;
+    projectiles.length = 0;
+    invaderProjectiles.length = 0;
+    particles.length = 0;
+    grids.length = 0;
+    game = {
+        over: false,
+        active: true
+    }
+    score = 0;
+    scoreEl.innerHTML = score;
+
+    document.getElementById("btn_iniciar").classList.add("escondido");
+    audios[3].play();
+
+    estrelas();
+    fundoMusical();
+}
+
+function start() {
+    zeraControles();
+    player.inicia();
+
+    animate();
 }
 
 function createParticles({object, color}) {
