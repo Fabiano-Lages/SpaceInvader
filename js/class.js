@@ -59,7 +59,7 @@ class Player {
         }
     }
 
-    destroy() {
+    destruir() {
         this.opacity = 0;
         this.audio.play();
     }
@@ -171,7 +171,7 @@ class Invader {
         ));
     }
 
-    destroy() {
+    destruir() {
         this.audio.play();
     }
 }
