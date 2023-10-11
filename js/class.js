@@ -22,6 +22,9 @@ class Player {
                 y: canvas.height - this.height - 20
             };
         };
+
+        this.audio = new Audio();
+        this.audio.src = "audio/explosao.mp3";
     }
 
     draw() {
@@ -55,6 +58,11 @@ class Player {
             this.position.x += this.velocity.x;
         }
     }
+
+    destroy() {
+        this.opacity = 0;
+        this.audio.play();
+    }
 }
 
 class Projectile {
@@ -62,6 +70,9 @@ class Projectile {
         this.position = position;
         this.velocity = velocity;
         this.radius = 4;
+        this.start = true;
+        this.audio = new Audio(tiro.src);
+
     }
 
     draw() {
@@ -70,6 +81,10 @@ class Projectile {
         c.fillStyle = "red";
         c.fill();
         c.closePath();
+        if(this.start) {
+            this.audio.play();
+            this.start = false;
+        }
     }
 
     update() {
@@ -120,6 +135,8 @@ class Invader {
                 y: position.y
             };
         };
+
+        this.audio = new Audio(naveDestruida.src);
     }
 
     draw() {
@@ -152,6 +169,10 @@ class Invader {
                 }
             }
         ));
+    }
+
+    destroy() {
+        this.audio.play();
     }
 }
 

@@ -101,7 +101,7 @@ function animate() {
                             createParticles({object: player, color:"whitesmwhiteoke"});
                             setTimeout(() => {
                                 invaderProjectiles.splice(p, 1);
-                                player.opacity = 0;
+                                player.destroy();
                                 game.over = true;
                             }, 0);
 
@@ -130,6 +130,7 @@ function animate() {
                             if(invaderFound && projectileFound) {
                                 score += 100;
                                 scoreEl.innerHTML = score;
+                                invader.destroy();
                                 createParticles({object: invader});
 
                                 grid.invaders.splice(i, 1);

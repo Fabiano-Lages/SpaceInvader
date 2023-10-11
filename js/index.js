@@ -1,6 +1,9 @@
 const canvas = document.querySelector("canvas");
 const scoreEl = document.querySelector("#scoreEl");
 const c = canvas.getContext("2d");
+const tiro = new Audio("audio/tiro.mp3");
+const naveDestruida = new Audio("audio/explosaoinimiga.mp3");
+
 
 canvas.width = 1024;
 canvas.height = 576;
